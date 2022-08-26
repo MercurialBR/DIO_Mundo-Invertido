@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title> Mundo Invertido </title>
+
     <link rel="icon" type="imagem/png" href="assets/images/banner/icon-ST.png" />
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title> Mundo Invertido </title>
 </head>
-<body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
+<body class="dark-theme" aria-label="O site está utilizando o tema light" role="body">
     <header aria-label="Cabeçalho da página.">
         <audio src="music" autoplay>
             <source src="assets/musics/normal-world.mpeg" />
@@ -134,5 +135,27 @@
         <img src="assets/images/footer/logo.svg" alt="Logotipo DIO">
     </footer>
 
+    <script>
+        window.addEventListener('click', function() {
+          const audio = document.getElementById('music');
+          audio.play();
+          audio.volume = 0.2;
+        });
+  
+        function switchTheme() {
+          document.body.classList.toggle('dark-theme');
+          document.body.classList.toggle('light-theme');
+  
+          document.body.setAttribute('aria-label', 'Trocando o tema');
+  
+          const theme = document.body.classList[0];
+          const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
+  
+          const audio = document.getElementById('music');
+          audio.src = `assets/musics/${music}`;
+          audio.play();
+          audio.volume = 0.2;
+        }
+      </script>
 </body>
 </html>

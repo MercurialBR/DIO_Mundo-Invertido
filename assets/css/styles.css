@@ -421,7 +421,7 @@ footer::after {
 
 
 /* MEDIA QUERY */
-@media screen and (min-width: 400px) and (max-width: 1024px) {
+@media screen and (min-width: 300px) and (max-width: 1024px) {
     #section-inverted-world {
         display: flex;
         flex-direction: column-reverse;

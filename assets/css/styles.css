@@ -423,8 +423,24 @@ footer::after {
 
 
 
-/* MEDIA QUERY */
-@media screen and (min-width: 400px) and (max-width: 1024px) {
+
+
+
+
+
+
+
+
+/* ----------MEDIA QUERY-------------- */
+@media screen and (min-width: 350px) and (max-width: 1024px) {
+    h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    p {
+        width: 90%;
+    }
+
     #section-inverted-world {
         display: flex;
         flex-direction: column-reverse;
@@ -461,8 +477,8 @@ footer::after {
     }
 
     #section-stranger-things-gallery h2 {
-        width: 100%;
-        text-align: center;
+        width: 90%;
+        font-size: 40px;
     }
     .gallery-container {
         display: flex;
@@ -482,7 +498,34 @@ footer::after {
         display: none;
     }
     .form-container {
-        width: 90%;
-        align-items: center;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px){
+    .form-container {
+        width: 80%;
+    }
+    #section-form {
+        width: 100%;
+    }
+    #section-form h2 {
+        width: 80%;
+        font-size: 40px;
+        text-align: center;
+    }
+    #section-stranger-things-gallery .gallery-image{
+        outline: 10px solid var(--highlight-color);
+        border: 3px solid var(--primary-color);
+    }
+    #section-stranger-things-trailer iframe{
+        width: 80%;
+        height: auto;
+    }
+    main .form-content {
+        width: 100%;
+    }
+    main .form-content h3 {
+        display: none;
     }
 }
